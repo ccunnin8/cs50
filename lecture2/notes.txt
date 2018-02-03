@@ -1,0 +1,96 @@
+int main(void)
+{
+    printf("hello, world\n");
+}
+
+
+make file = ERROR message
+why?
+no #include <stdio.h>
+
+Error message
+- Red error
+- Implicitly declaring library function printf
+- help50 program that staff wrote to help understand error message
+
+buggy1.c
+--------------------------
+
+#include <stdio.h>
+
+int main(void)
+{
+    string s = get_string();
+    printf("hello, %s\n",s);
+
+}
+
+ERROR = get_string is not declared, string is also not declared
+FIX = #include <cs50.h>
+
+bugg2.c
+
+#include <stdio.h>
+
+int main(void)
+{
+    for (int i = 0; i <= 10; i++)
+    {
+        printf("#\n");
+    }
+}
+
+ERROR: +1 error, 0 to <= 10 prints 0,1,2,3,4,5,6,7,8,9,10 which is 11 times
+cs50.h -> eprintf("");
+
+bugg3
+#include <cs50.h>
+#include <stdio.h>
+
+int get_negative_int(void);
+
+int main(void)
+{
+    int i = get_negative_int();
+    printf("%i is a negative integer\n", i);
+}
+
+int get_negative_int(void)
+{
+    int n;
+    do
+    {
+        printf("n is : \");
+        n = get_int();
+    }
+    while(n > 0);
+    return n;
+}
+
+ERROR: Needs to be >= 0 (duh)
+Rubber Duck Debugging
+All they have is a rubber duck
+Walk through code
+
+
+Secret Key Cryptography
+Only the sender and the recipient have the key
+Inputs -> [] -> Outputs
+"Text" -> [] -> Encrypted
+Key + Plaintext -> [] -> ciphertext
+ciphertext + Key -> [] -> Plaintext
+
+String
+Sequence of characters
+cs50.h gives datatype string, but there is no datatype string
+string is just char char char char
+Zamyla
+Z + a + m + y + l + a
+[Z,a,m,y,l,a]
+
+
+Typecasting
+chars are an abstraction of decimal numbers which are an abstraction of binary numbers
+ASCII Maps letters to numbers A 65 B 66 C 67
+
+

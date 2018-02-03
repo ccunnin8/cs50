@@ -1,0 +1,65 @@
+String
+Array of characters
+\0 = 1 byte of 0
+
+int main(void)
+void = takes no command line imput
+int main(int argc, string argv[])
+argc = how many imputs
+argv (argument vector) array of words that were typed
+
+ARRAY = [][][][][][][][]
+generic data structure to store data under the hood
+"Eight doors"
+7 doors
+
+Binary Search
+    Divide and conquer
+    Sorted array
+    element[arraysize/2] =
+    recursively
+Linear Search
+    1 -> 2 -> 3 -> 4 -> 5
+    Random is functionally equivalent
+
+for each element in array
+    if element == number
+        return true
+return false
+
+int sort(int array[])
+{
+
+}
+Selection
+    select the next smallest
+Bubble Sort
+Insertion sort
+    for i from 1 to n-1
+        call 0th through i-1th
+        remove i
+
+        37526
+        pop
+        3
+        pop
+        5
+
+(n-1) + (n-2) + ... + 1 sum  n^2/2 - n/2 ~ n^2 O(n^2) (on the order of)
+omega = opposite of O
+    lower bound
+    how few steps
+
+if omega and O are the same then computation time = THETA
+
+MERGE SORT
+
+on input of n elements
+    if n < 2
+        return
+    else
+        sort left half of elements
+        sort right half of elements
+        merge elements
+
+    n*log(n)

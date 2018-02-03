@@ -1,0 +1,49 @@
+Algorithms 
+-----------------------------------------
+Omega, Theta, 
+
+There are no strings! 
+
+What is a string?
+- Address to first byte of name 
+- begins at address, ends at \0
+- char * == string 
+    - address to it's first character 
+    - there is no string 
+    -strcmp(s,t) "string compare" 
+    - malloc
+
+malloc 
+    - give me a bunch of bytes of memory 
+    - how long is string strlen(s) + 1 (have to add the extra \0) * sizeof(char)
+    - returns pointer to first byte 
+    
+&
+ -pass in address of value to function
+* 
+- get address 
+
+Functions 
+- passed by value 
+ 
+ pointer arithmetic 
+ - *(s+i)
+ 
+ hexadecimal
+ 0 1 2 3 4 5 6 7 8 9 a b c d e f 
+ 2 4 8 16
+ ffd8ff
+ 0xff 0xd8 0xff
+ 
+ struct 
+ --------------------------------------------------------
+ 
+ typedef struct 
+ {
+    string name;
+    string dorm;
+ }
+ student;
+ 
+ fprintf(file "%s,%s,", students[i].name, students[i].dorm);
+ 

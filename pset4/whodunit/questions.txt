@@ -1,0 +1,32 @@
+1.
+Stdint.h is a header file that redefines scalar types (char, int, long, float) and defines macros.
+
+2.
+To make sure that the redefined types are within specific ranges. This helps programs be compiled by different compilers on
+different machines and act in the expected manner.
+
+3.
+BYTE: 1 byte
+DWORD: 4 bytes
+LONG: 4 bytes
+WORD: 2 bytes
+
+4.  BM, 66 77, 0x42 0x4d
+
+5.  bfSize is the size in bytes of the .bmp file. biSize is the number of bytes required
+
+6.  It is a top-down bitmap starting at the upper-left corner.
+
+7.  biBitCount
+
+8.  If the user types a filename that doesn't exist
+
+9.  Because it is copying the size of 1 RGBTriple at a time.
+
+10. 3
+
+11. skips over the padding by changing the file position of the stream
+
+12. it is used as a constant in fseek and tells the function if the offset is relative to the beginning, current position,
+or end.
+

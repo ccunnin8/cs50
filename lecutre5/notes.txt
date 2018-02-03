@@ -1,0 +1,276 @@
+RECAP
+
+//** STRUCT **//
+typedef struct
+{
+    string name;
+    string dorm;
+}
+student;
+
+declare in .h files to share
+
+ struct0.c
+
+ #include "struct.h"
+
+ int main(int argc, char *argv[])
+ {
+    int enrollment = get_int("get enrollment: ")
+    for (int i = 0; i < enrollment; i++)
+    {
+        //get each student
+    }
+    FILE *file = fopen("students.csv","w");
+    if (file)
+    {
+        fprintf(file,"%s,%s,student.name,student.dorm);
+    }
+    return 0;
+ }
+
+ void swap(int *a, int *b)
+ {
+    int tmp = *a;
+    *a = *b;
+    *b = *tmp;
+ }
+
+ int main(void)
+ {
+    int a = 1;
+    int b  = 2;
+    swap(&a,&b);
+ }
+
+ //KEEP MEMORY FOR A WHILE
+ //MALLOC makes variables safer because they are not overwritten on the heap like
+ they are on the stack
+
+    - calloc (initializes all to 0)
+
+Linked List
+===============================================
+list includes number and pointer to next node
+dyanamism -> can grow and shrink data structures
+linked list by an adress of the first node
+
+(not linked list)
+realloc - finds new chunk of memory and copies everything
+
+typedef struct node
+{
+    int number;
+    struct node *next;
+}
+node;
+
+node *numbers = null;
+
+if (ptr->number == number)
+
+
+Hashing
+------------------------------------------
+
+
+SHORTS
+=========================================================
+
+--Structures--
+create different data types
+different variables of different types into a new name
+struct car
+{
+    int year;
+    char model[10];
+    char plate[7];
+    int odometer;
+    double engine_size;
+}
+normally in separate header files or at the top of the file
+'dot operator'
+struct car mycar;
+car.year = 2011;
+car.plate = 'CS60';
+
+struct car *mycar = malloc(sizeof(struct car));
+(*mycar).year = 2011;
+(*mycar).playe = "CS50";
+(*mycar).odometer = 50202020;
+
+-> deferences then accesses the field
+(*mycar).year = mycar->year
+(*mcar).plate = mycar->plate
+
+DEFINING CUSTOM DATA TYPES
+reduce struct ____ to _____
+typedef struct car
+{
+    ...variables
+}
+car_t
+
+SINGLY-LINKED LIST
+collections
+- array (collections of one type)
+        - hard to insert
+        - not flexible
+- structs (collections of different types but not chained together)
+-singly linked list
+    - node
+        - data
+        - pointer to another node of the same type
+        typdef struct node
+        {
+            int n;
+            struct node *next;
+        }
+        node;
+
+node* create(int n)
+{
+    node *new = malloc(sizeof(node));
+    new->n = n;
+    new->next = NULL;
+    return new;
+}
+
+bool find(node *head, int val)
+{
+    node *tmp = head;
+    if (tmp == NULL)
+    {
+        return false;
+    }
+    if (tmp->n == val)
+    {
+        return true;
+    }
+    else
+    {
+        tmp = tmp->next;
+        find(tmp,val);
+    }
+}
+
+node* insert(node* first, int val)
+{
+    node *new = malloc(sizeof(node));
+    new->n = val;
+    new->next = first;
+    return next;
+}
+
+ int destory(node* first)
+ {
+    if (!first->next)
+        return 0
+    else
+        destory(first->next);
+    free(first);
+ }
+
+ ======HASH TABLES=======
+ - bad at ordering and sorting
+ - don't care that data is sorted
+ - two distinct pieces
+    - hash function
+        - hash code
+    - array
+        - data of the type
+
+Good hash...
+    - deterministic (data -> hash -> SAME RESULT)
+    - use only data being hashed
+    - use all of the data being hashed
+    - uniformly distribute data
+    - generate very different hash codes for similar data
+
+don't write hash functions, find your own on the internet (more of an art then a science (CITE source)
+
+collision
+    - two pieces of data hash to the same code
+    - linear probing
+        - look linearly to find out where we should put the data
+
+#Arbitrary amount of data if we use linked lists at each hash
+    - no more collision
+    - O(n) / x = x * faster
+    - makes it easier to search through linked lists
+
+===== TRIES ========
+- key is guaranteed to be unique
+- value is true or false
+
+== STACKS ==
+-- commonly implemented in either array or linked list
+-- only most recent element can be removed
+-- LIFO
+
+Push (add new element to the top) or Pop (remove the most recently added element)
+
+array-based
+
+typedef struct _stack
+{
+    //max amount of elements = capacity
+    VAL array[capacity];
+    // element most recently added
+    int top;
+}
+stack;
+
+stack new(void)
+{
+}
+
+void (stack *s)
+{
+
+}
+
+stack s;
+s.capacity = 10;
+
+
+
+==QUEUE==
+
+type def _q
+{
+    VAL array[capacity];
+    int front;
+    int size;
+}
+
+q q;
+q.front = 0;
+q.size = 0;
+
+enqueue(&q, n)
+{
+    q.array[q] = n;
+    q.size++;
+    q.front = n;
+
+}
+
+int dequeue(q *q)
+{
+    q.front = q.array[1]
+    q.size--;
+    return q.front;
+}
+
+as a list
+
+typedef struct _q
+{
+    VAL val;
+    struct _q *prev;
+    struct _q *next;
+}
+q;
+
+
